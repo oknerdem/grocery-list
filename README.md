@@ -1,1 +1,1 @@
-##### <sup>🍃</sup> **Grocery List App** <sub>🍃</sub>
+##### <sup>🎃</sup> **Grocery List App** <sub>🎃</sub>
