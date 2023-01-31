@@ -1,3 +1,3 @@
 ##### <sup>🎃</sup> **Grocery List App** <sub>🎃</sub>
 
-###### **Grocery List App**
+###### _Built with_ Next.js & TailwindCSS & AutoAnimate & UseContext.
