@@ -50,7 +50,7 @@ const Main = () => {
             </button>
           </div>
         </div>
-        <div className="flex items-center h-full">
+        <div className="flex items-end h-full">
           <button className="mt-8 bg-red-600 text-red-100 max-w-xs mx-auto w-36 py-2 rounded-md focus:outline-none hover:opacity-80 duration-150">
             Reset
           </button>
