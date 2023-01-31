@@ -38,14 +38,9 @@ const Main = () => {
             Submit
           </button>
         </form>
-        <div className="grid grid-cols-3 mt-6 px-4">
+        <div className="grid grid-cols-3 col-span-3 mt-6 px-4">
           <span>Eggs</span>
-          <span
-            className="99999999999999999999*
-          "
-          >
-            x12
-          </span>
+          <span className="justify-center flex">x12</span>
           <div className="flex gap-2 justify-end">
             <button className="text-xl text-green-500 hover:opacity-60 duration-150">
               <FiEdit />
