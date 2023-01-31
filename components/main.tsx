@@ -1,4 +1,5 @@
 import { FiEdit, FiTrash } from 'react-icons/fi';
+import { MdOutlineLocalGroceryStore } from 'react-icons/md';
 import styles from '@/styles/Home.module.css';
 
 const Main = () => {
@@ -11,7 +12,12 @@ const Main = () => {
         {/* <div className="bg-red-200 p-1 text-center rounded text-red-700">
           Your item removed from the list!
         </div> */}
-        <h2 className="text-center text-2xl font-bold">Grocery Bud</h2>
+        <h2 className="text-2xl font-bold flex items-center justify-center">
+          <MdOutlineLocalGroceryStore className="text-4xl" />
+          <sup className="text-xs rounded-full bg-red-500 px-1.5 -ml-4 mb-3 text-white py-[1px]">
+            1
+          </sup>
+        </h2>
         <form
           className="flex justify-center gap-2"
           onClick={(e: any) => {
