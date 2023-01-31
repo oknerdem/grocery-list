@@ -23,6 +23,14 @@ const Main = () => {
             className="bg-blue-100 p-2 rounded w-full focus:outline-none"
             placeholder="e.g. yogurt"
           />
+          <input
+            type="number"
+            className="w-fit rounded bg-white shadow border border-zinc-300 p-2 focus:outline-none text-center focus:placeholder:opacity-0"
+            min={1}
+            max={100}
+            placeholder="1"
+            title="default value is 1"
+          />
           <button
             type="submit"
             className="bg-blue-600 text-blue-100 p-2 rounded w-20 hover:opacity-80 duration-150"
@@ -30,9 +38,15 @@ const Main = () => {
             Submit
           </button>
         </form>
-        <div className="flex justify-between mt-6 px-4">
+        <div className="grid grid-cols-3 mt-6 px-4">
           <span>Eggs</span>
-          <div className="flex gap-2">
+          <span
+            className="99999999999999999999*
+          "
+          >
+            x12
+          </span>
+          <div className="flex gap-2 justify-end">
             <button className="text-xl text-green-500 hover:opacity-60 duration-150">
               <FiEdit />
             </button>
