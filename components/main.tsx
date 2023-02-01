@@ -7,9 +7,8 @@ import Status from '@/components/status';
 import styles from '@/styles/Home.module.css';
 
 const Main = () => {
+  const { setData, setStatus } = useStore();
   const resetButtonText = 'Reset';
-
-  const { setData, setStatus, data } = useStore();
 
   const handleReset = () => {
     setData([]);
