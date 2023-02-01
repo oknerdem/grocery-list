@@ -15,7 +15,7 @@ const Form = () => {
       />
       <input
         type="number"
-        className="w-fit rounded bg-white shadow border border-zinc-300 p-2 focus:outline-none text-center focus:placeholder:opacity-0 placeholder:select-none"
+        className="w-[4.7rem] rounded bg-white shadow border border-zinc-300 p-2 focus:outline-none text-center focus:placeholder:opacity-0 placeholder:select-none"
         min={1}
         max={100}
         placeholder="1"
