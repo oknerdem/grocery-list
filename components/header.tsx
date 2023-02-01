@@ -9,10 +9,12 @@ interface HeaderProps {
 
 const Header = ({ title, content }: HeaderProps) => {
   const { data } = useStore();
+  const itemCount = data.length > 0 ? `${data.length}` : '';
+
   return (
     <Head>
       <title>
-        {title} 🍓 {data.length}
+        {title} 🍓 {itemCount}
       </title>
       <meta name="description" content={content} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />

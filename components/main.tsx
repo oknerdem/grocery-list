@@ -1,40 +1,33 @@
-import { useEffect } from 'react';
 import { useStore } from '@/context/store';
 import { ResetButton } from '@/components/buttons';
 import Cart from '@/components/home/cart';
 import Form from '@/components/home/form';
 import Items from '@/components/home/items';
+import Status from '@/components/status';
 import styles from '@/styles/Home.module.css';
 
 const Main = () => {
-  const { setData } = useStore();
   const resetButtonText = 'Reset';
 
-  useEffect(() => {
-    setData([
-      {
-        id: 1,
-        name: 'Eggs',
-        quantity: 12,
-      },
-      {
-        id: 3,
-        name: 'Bread',
-        quantity: 1,
-      },
-    ]);
-  }, [setData]);
+  const { setData, setStatus, data } = useStore();
+
+  const handleReset = () => {
+    setData([]);
+    setStatus('reset');
+
+    setTimeout(() => {
+      setStatus('empty');
+    }, 3000);
+  };
 
   return (
     <main className={styles.main}>
       <section className={styles.mainBox}>
-        <div className="bg-green-200 p-1 text-center rounded text-green-700 select-none">
-          Your item added to the list!
-        </div>
+        <Status />
         <Cart />
         <Form />
         <Items />
-        <ResetButton text={resetButtonText} />
+        <ResetButton text={resetButtonText} onClick={handleReset} />
       </section>
     </main>
   );

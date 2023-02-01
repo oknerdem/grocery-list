@@ -1,3 +1,4 @@
+import { useStore } from '@/context/store';
 import styles from '@/styles/Home.module.css';
 
 interface ButtonProps {
@@ -6,10 +7,15 @@ interface ButtonProps {
 }
 
 const ResetButton = ({ text, ...rest }: ButtonProps) => {
+  const { data } = useStore();
   return (
-    <button className={styles.resetBtn} {...rest}>
-      {text}
-    </button>
+    <>
+      {data.length > 0 && (
+        <button className={styles.resetBtn} {...rest}>
+          {text}
+        </button>
+      )}
+    </>
   );
 };
 
