@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useStore } from '@/context/store';
-import { ResetButton } from './buttons';
+import { ResetButton } from '@/components/buttons';
 import Cart from '@/components/home/cart';
 import Form from '@/components/home/form';
 import Items from '@/components/home/items';
