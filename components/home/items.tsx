@@ -7,7 +7,11 @@ const Items = () => {
   const { data, setData, setStatus } = useStore();
   const [parent] = useAutoAnimate<HTMLDivElement>();
 
-  const deleteHadle = (id: number) => {
+  // const editHandle = (id: number) => {
+  //   setStatus('edited');
+  // };
+
+  const deleteHandle = (id: number) => {
     setData(data.filter((item: any) => item.id !== id));
     setStatus('deleted');
   };
@@ -27,7 +31,7 @@ const Items = () => {
                 <button className={styles.itemsEdit}>
                   <FiEdit />
                 </button>
-                <button onClick={() => deleteHadle(item.id)}>
+                <button onClick={() => deleteHandle(item.id)}>
                   <FiTrash className={styles.itemsDel} />
                 </button>
               </div>
