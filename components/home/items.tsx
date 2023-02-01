@@ -1,5 +1,6 @@
 import { FiEdit, FiTrash } from 'react-icons/fi';
 import { useStore } from '@/context/store';
+import styles from '@/styles/Home.module.css';
 
 const Items = () => {
   const { data } = useStore();
@@ -8,15 +9,15 @@ const Items = () => {
     <>
       {data?.map((item: any) => {
         return (
-          <div className="grid grid-cols-3 col-span-3 mt-6 px-4" key={item.id}>
+          <div className={styles.itemsMain} key={item.id}>
             <span>{item.name}</span>
             <span className="justify-center flex">x{item.quantity}</span>
             <div className="flex gap-2 justify-end">
-              <button className="text-xl text-green-500 hover:opacity-60 duration-150">
+              <button className={styles.itemsEdit}>
                 <FiEdit />
               </button>
               <button>
-                <FiTrash className="text-xl text-red-600 hover:opacity-60 duration-150" />
+                <FiTrash className={styles.itemsDel} />
               </button>
             </div>
           </div>

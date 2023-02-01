@@ -1,4 +1,5 @@
 import { SubmitButton } from '@/components/buttons';
+import styles from '@/styles/Home.module.css';
 
 const Form = () => {
   return (
@@ -10,16 +11,17 @@ const Form = () => {
     >
       <input
         type="text"
-        className="bg-blue-100 p-2 rounded w-full focus:outline-none placeholder:select-none"
+        className={styles.formInputText}
         placeholder="e.g. yogurt"
+        required
       />
       <input
         type="number"
-        className="w-[4.7rem] rounded bg-white shadow border border-zinc-300 p-2 focus:outline-none text-center focus:placeholder:opacity-0 placeholder:select-none"
+        className={styles.formInputNum}
         min={1}
         max={100}
         placeholder="1"
-        title="default value is 1"
+        title="Default is 1"
       />
       <SubmitButton text="Submit" />
     </form>
