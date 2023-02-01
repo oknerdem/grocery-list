@@ -31,9 +31,6 @@ const Main = () => {
         <div className="bg-green-200 p-1 text-center rounded text-green-700 select-none">
           Your item added to the list!
         </div>
-        {/* <div className="bg-red-200 p-1 text-center rounded text-red-700">
-          Your item removed from the list!
-        </div> */}
         <Cart />
         <Form />
         <Items />
