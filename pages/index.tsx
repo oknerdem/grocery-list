@@ -1,7 +1,8 @@
+import { NextPage } from 'next';
 import Header from '@/components/header';
 import Main from '@/components/main';
 
-export default function Home() {
+const Home: NextPage = () => {
   const title = 'Grocery List';
   const content = 'A simple grocery list app';
 
@@ -11,4 +12,6 @@ export default function Home() {
       <Main />
     </>
   );
-}
+};
+
+export default Home;
