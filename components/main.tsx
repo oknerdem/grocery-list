@@ -27,11 +27,6 @@ const Main = () => {
         name: 'Bread',
         quantity: 1,
       },
-      {
-        id: 4,
-        name: 'Butter',
-        quantity: 2,
-      },
     ]);
   }, [setData]);
 
