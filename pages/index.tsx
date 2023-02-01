@@ -3,7 +3,7 @@ import Header from '@/components/header';
 import Main from '@/components/main';
 
 const Home: NextPage = () => {
-  const title = 'Grocery List';
+  const title = 'Grocery';
   const content = 'A simple grocery list app';
 
   return (

@@ -18,11 +18,6 @@ const Main = () => {
         quantity: 12,
       },
       {
-        id: 2,
-        name: 'Milk',
-        quantity: 4,
-      },
-      {
         id: 3,
         name: 'Bread',
         quantity: 1,
