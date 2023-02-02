@@ -21,7 +21,7 @@ const Status = () => {
       )}
       {status === 'edited' && (
         <div className="bg-yellow-200 p-1 text-center rounded text-yellow-700 select-none">
-          Item edited from the list!
+          You are now editing an item!
         </div>
       )}
       {status === 'empty' && null}
