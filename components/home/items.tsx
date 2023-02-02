@@ -23,15 +23,16 @@ const Items = () => {
         ref={parent}
       >
         {data?.map((item: any) => {
+          const { name, quantity, id } = item;
           return (
-            <div className={styles.itemsMain} key={item.id}>
-              <span>{item.name}</span>
-              <span className="justify-center flex">x{item.quantity}</span>
+            <div className={styles.itemsMain} key={id}>
+              <span className="first-letter:uppercase">{name}</span>
+              <span className="justify-center flex">x{quantity}</span>
               <div className="flex gap-2 justify-end">
                 <button className={styles.itemsEdit}>
                   <FiEdit />
                 </button>
-                <button onClick={() => deleteHandle(item.id)}>
+                <button onClick={() => deleteHandle(id)}>
                   <FiTrash className={styles.itemsDel} />
                 </button>
               </div>

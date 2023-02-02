@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header = ({ title, content }: HeaderProps) => {
   const { data } = useStore();
-  const itemCount = data.length > 0 ? `${data.length}` : '';
+  const itemCount = data.length > 0 ? `( ${data.length} )` : '';
 
   return (
     <Head>
