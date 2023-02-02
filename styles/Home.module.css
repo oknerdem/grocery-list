@@ -52,3 +52,7 @@
 .submitBtn {
   @apply bg-blue-600 text-blue-100 p-2 rounded w-20 hover:opacity-80 duration-150 select-none;
 }
+
+.saveBtn {
+  @apply md:mt-6 mt-2 bg-emerald-500 text-emerald-100 max-w-xs mx-auto w-36 py-2 rounded-md focus:outline-none hover:opacity-80 duration-150 select-none;
+}

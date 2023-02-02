@@ -6,6 +6,13 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
+const SaveButton = ({ text, ...rest }: ButtonProps) => {
+  const { data } = useStore();
+  return (
+    <>{data.length > 0 && <button className={styles.saveBtn}>{text}</button>}</>
+  );
+};
+
 const ResetButton = ({ text, ...rest }: ButtonProps) => {
   const { data } = useStore();
   return (
@@ -27,4 +34,4 @@ const SubmitButton = ({ text, ...rest }: ButtonProps) => {
   );
 };
 
-export { ResetButton, SubmitButton };
+export { ResetButton, SubmitButton, SaveButton };

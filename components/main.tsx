@@ -13,7 +13,6 @@ const Main = () => {
   const handleReset = () => {
     setData([]);
     setStatus('reset');
-
     setTimeout(() => {
       setStatus('empty');
     }, 3000);
