@@ -1,6 +1,5 @@
-import Head from 'next/head';
-
 import { useStore } from '@/context/store';
+import Head from 'next/head';
 
 interface HeaderProps {
   title: string;
@@ -13,9 +12,7 @@ const Header = ({ title, content }: HeaderProps) => {
 
   return (
     <Head>
-      <title>
-        {title} 🍓 {itemCount}
-      </title>
+      <title>{title}</title>
       <meta name="description" content={content} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/grocery.png" />
