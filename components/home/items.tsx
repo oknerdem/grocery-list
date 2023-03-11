@@ -1,6 +1,8 @@
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { FiEdit, FiTrash } from 'react-icons/fi';
 import { useStore } from '@/context/store';
+import Text from '@/components/text';
+import Button from '@/components/button';
 import styles from '@/styles/Home.module.css';
 
 const Items = () => {
@@ -34,16 +36,21 @@ const Items = () => {
           const { name, quantity, id } = item;
           return (
             <div className={styles.itemsMain} key={id}>
-              <span className="first-letter:uppercase">{name}</span>
-              <span className="justify-center flex">x{quantity}</span>
-              <div className="flex gap-2 justify-end">
-                <button onClick={() => editHandle(id)}>
+              <Text isUpperCase="first">{name}</Text>
+
+              <Text isBlock={false} isFlex="center">
+                x{quantity}
+              </Text>
+
+              <Text isFlex="end" gap={2}>
+                <Button onClick={() => editHandle(id)}>
                   <FiEdit className={styles.itemsEdit} />
-                </button>
-                <button onClick={() => deleteHandle(id)}>
+                </Button>
+
+                <Button onClick={() => deleteHandle(id)}>
                   <FiTrash className={styles.itemsDel} />
-                </button>
-              </div>
+                </Button>
+              </Text>
             </div>
           );
         })}
